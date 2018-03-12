@@ -19,10 +19,13 @@ Currently, this project targets experienced users.
 Please let me know if you have any question and if you want to add more tested enviroments.
 
 ### Compiling:
-1. edit configuration file: vnpy/cmake/configuration.cmake to set proper path for boost and python
-2. On windows: edit compile.bat by setting proper location for MSBuild.exe and cmake.exe
-3. run compile.bat or compile.sh depending on your system
+1. edit configuration file: vnpy/cmake/configuration.cmake to set proper path for boost and python;
+2. On windows: edit compile.bat by setting proper location for MSBuild.exe and cmake.exe;
+3. run compile.bat or compile.sh depending on your system.
 
 ---
+### Belief
+Write once, use everywhere.
+
 ### License
 MIT 
