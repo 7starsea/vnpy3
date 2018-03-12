@@ -46,5 +46,6 @@ message(status "**Boost_LIBRARIES: ${Boost_LIBRARIES}")
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
  
 add_subdirectory(api/xtp)
+add_subdirectory(api/ctp)
 
 
