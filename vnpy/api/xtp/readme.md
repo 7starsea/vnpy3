@@ -8,6 +8,9 @@
 
 Supporting Windows 32(beta) / Windows x64 / Linux x64.
 
+### Python Usage
+Please take a look at xtpGateway.py files.
+
 ### API Version
 Date: 2017.12.04
 

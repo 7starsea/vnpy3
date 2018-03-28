@@ -6,9 +6,10 @@ Currently, this project targets experienced users.
 
 ### Contribution:
 - simplified the building process with cmake
-- supporting python3
+- supporting python3, theoretically, it also supports python2 (not tested)
 
 ### Supporting Interface:
+- ctp
 - xtp
 
 ### Dependency:
@@ -20,6 +21,8 @@ Please let me know if you have any question and if you want to add more tested e
 
 ### Compiling:
 1. edit configuration file: vnpy/cmake/configuration.cmake to set proper path for boost and python;
+    1.1 We currently use shared-lib for python/boost.python and static-lib for other boost-libraries,
+    you may want to do some changes (see Line 20-31, 40-42 in vnpy/CMakeLists.txt).
 2. On windows: edit compile.bat by setting proper location for MSBuild.exe and cmake.exe;
 3. run compile.bat or compile.sh depending on your system.
 
