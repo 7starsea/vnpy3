@@ -22,6 +22,8 @@ class XtpGateway(object):
         self.mdApi = XtpMdApi(self, md_conf)     # 行情API
         self.tdApi = XtpTdApi(self, td_conf)     # 交易API
 
+        self.ticker_info_data = {}
+
     def OnLog(self, msg):
         print(msg)
 
@@ -68,9 +70,16 @@ class XtpGateway(object):
         self.tdApi.close()
 
     def onQueryAllTickers(self, data, error, last):
-        print(data)
+        self.ticker_info_data[data['ticker']] = dict({'upper_price': data['upper_limit_price'],
+                                                      'lower_price': data['lower_limit_price'],
+                                                      'instrument_id': data['ticker'],
+                                                      'price_tick': data['price_tick']})
         if last:
             print('>>> queryAllTickers is done!!!')
+            import json
+            fp = open('kungfu_order_test_config.json', 'w')
+            json.dump(self.ticker_info_data, fp, indent=4)
+            fp.close()
         pass
 
     def queryAllTickers(self, exchange_id):
